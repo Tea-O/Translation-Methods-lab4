@@ -1,0 +1,40 @@
+grammar for;
+
+s()[] {
+    FOR WORD OB as()  <>
+}
+
+as()[] {
+    ab() <> | CB SEM <>
+}
+
+ab()[] {
+    a() ac() <>
+}
+
+ac()[] {
+    CB SEM <> | ZAP ab() <>
+}
+
+a()[] {
+    FOR an() <>
+}
+
+an()[] {
+    POINT an() <> | WORD <>
+}
+
+
+WORD { "[a-zA-Z]+" }
+NUM { "[0-9]+" }
+
+FOR { "int|double|float|void" }
+OB { "\\(" }
+CB { "\\)" }
+SEM { ";" }
+POINT { "\\*" }
+ASSIGN { "=" }
+ZAP { "\\," }
+EPS { "\\" }
+
+
